@@ -10,7 +10,7 @@ def index(response):
 
 def transcribe_view(request):
     if request.method == 'POST':
-        audio_file = request.FILES.get('audio_file')
+        audio_file = request.FILES.get('240325_1920.mp3')
         if audio_file:
             transcription = transcribe_audio(audio_file)
             return JsonResponse({'transcription': transcription})
